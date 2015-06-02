@@ -6,8 +6,14 @@
  * Time: 4:21 PM
  */
 class pelanggan{
-    var $idPelanggan;
-    var $namaPelanggan;
-    var $noHp;
-    var $alamatPelanggan;
+    public  $idPelanggan;
+    public  $namaPelanggan;
+    public  $noHp;
+    public  $alamatPelanggan;
+
+    function tambahpelanggan()
+    {
+        $sql = "INSERT INTO t_pelanggan VALUE ('$this->idPelanggan','$this->namaPelanggan','$this->noHp','$this->alamatPelanggan')";
+        $result = mysqli_query($conn, $sql);
+    }
 }
