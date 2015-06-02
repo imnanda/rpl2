@@ -3,7 +3,8 @@ $servername = "localhost";
 $username = "root";
 $password = "asdasd150494";
 $dbname = "rpl2";
-$conn = mysqli_connect($servername, $username, $password,$dbname);
-if (! $conn) {
-    die("Connection failed: ");
+$mysqli = new mysqli($servername, $username, $password,$dbname);
+if (mysqli_connect_errno()) {
+    echo "Error koneksi ke database";
+    exit;
 }
