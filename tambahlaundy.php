@@ -3,6 +3,15 @@
 <head>
     <?php
     include "include/header.php";
+    include "class_user.php";
+    include "class_laundry.php";
+    $datapelanggan = new pelanggan;
+    $datapelanggan = $datapelanggan->ambilakhir();
+    $pelanggan = $datapelanggan->fetch_object();
+
+    $datalaundy = new laundy;
+    $datalaundy = $datalaundy->ambildatalaundy();
+    $laundy = $datalaundy->fetch_object();
     ?>
 </head>
 
@@ -17,43 +26,47 @@
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">Pelanggan Baru</div>
+                        <div class="muted pull-left">Laundy Baru</div>
                     </div>
                     <div class="block-content collapse in">
                         <div class="span12">
                             <!-- BEGIN FORM-->
 
-                            <form action="proses/tambahuser.php"  class="form-horizontal" method="post">
-
+                            <form action="proses/tambahuser.php" class="form-horizontal" method="post">
                                 <div class="control-group">
-                                    <label class="control-label">Uneditable input</label>
+                                    <label class="control-label">Nama User</label>
+
                                     <div class="controls">
-                                        <span class="input-xlarge uneditable-input">Some value here</span>
+                                        <span
+                                            class="input-xlarge uneditable-input"><?php echo $pelanggan->nama_pelanggan; ?></span>
                                     </div>
+                                    <input type="hidden" name="id_laundy" value="<?php echo $laundy->id_cucian; ?>">
+                                </div>
+                                <div class="alert alert-error hide">
+                                    <button class="close" data-dismiss="alert"></button>
+                                    You have some form errors. Please check below.
                                 </div>
                                 <div class="alert alert-success hide">
                                     <button class="close" data-dismiss="alert"></button>
                                     Your form validation is successful!
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">Nama<span class="required">*</span></label>
-
+                                    <label class="control-label">Jenis<span class="required">*</span></label>
                                     <div class="controls">
-                                        <input type="text" name="nama" data-required="1" class="span6 m-wrap"/>
+                                        <select class="span6 m-wrap" name="category">
+                                            <option value="">Pilih...</option>
+                                            <option value="Category 1">Category 1</option>
+                                            <option value="Category 2">Category 2</option>
+                                            <option value="Category 3">Category 5</option>
+                                            <option value="Category 4">Category 4</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">Alamat<span class="required">*</span></label>
+                                    <label class="control-label">Berat Cucian<span class="required">*</span></label>
 
                                     <div class="controls">
-                                        <input type="text" name="alamat" data-required="1" class="span6 m-wrap"/>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label">Telepon<span class="required">*</span></label>
-
-                                    <div class="controls">
-                                        <input name="telepon" type="text" class="span6 m-wrap"/>
+                                        <input type="text" name="berat" data-required="1" class="span6 m-wrap"/>
                                     </div>
                                 </div>
                                 <div class="form-actions">

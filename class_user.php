@@ -5,7 +5,7 @@
  * Date: 6/2/2015
  * Time: 4:21 PM
  */
-include "db_connect.php";
+include "include/db_connect.php";
 class pelanggan{
 
     public  $idPelanggan;
@@ -33,4 +33,10 @@ class pelanggan{
         $sql = "UPDATE t_pelanggan SET nama_pelanggan ='$this->namaPelanggan',alamat_pelanggan ='$this->alamatPelanggan',telepon ='$this->telepon' WHERE id_pelanggan = $id_pelanggan";
         $result = Koneksi::getconn()->query($sql);
     }
+    function  ambilakhir()
+    {
+        $sql = "SELECT * FROM t_pelanggan ORDER BY id_pelanggan DESC LIMIT 1";
+        return koneksi::getconn()->query($sql);
+    }
+
 }

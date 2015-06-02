@@ -11,3 +11,5 @@ $pelanggan -> namaPelanggan = $_POST['nama'];
 $pelanggan -> telepon = $_POST['telepon'];
 $pelanggan -> alamatPelanggan = $_POST['alamat'];
 $pelanggan ->tambahpelanggan();
+
+header('Location:../tambahlaundy.php');
