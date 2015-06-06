@@ -4,7 +4,7 @@
     <?php
     include "include/header.php";
     include "data_pelanggan.php";
-    $datapelanggan = new pelanggan;
+    $datapelanggan = new data_pelanggan;
     $datapelanggan = $datapelanggan->ambilsebagian($id_pelanggan = $_GET['id']);
     $pelanggan=$datapelanggan->fetch_object();
     ?>

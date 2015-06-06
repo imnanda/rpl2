@@ -5,7 +5,7 @@
     include "include/header.php";
     include "data_pelanggan.php";
     include "Data_cucian.php";
-    $datapelanggan = new pelanggan;
+    $datapelanggan = new data_pelanggan;
     $datapelanggan = $datapelanggan->ambilakhir();
     $pelanggan = $datapelanggan->fetch_object();
     ?>

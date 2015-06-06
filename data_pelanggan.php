@@ -6,7 +6,7 @@
  * Time: 4:21 PM
  */
 include "include/db_connect.php";
-class pelanggan{
+class data_pelanggan{
 
     public  $idPelanggan;
     public  $namaPelanggan;

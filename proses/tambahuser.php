@@ -6,7 +6,7 @@
  * Time: 7:14 PM
  */
 include "../data_pelanggan.php";
-$pelanggan = new pelanggan();
+$pelanggan = new data_pelanggan();
 $pelanggan -> namaPelanggan = $_POST['nama'];
 $pelanggan -> telepon = $_POST['telepon'];
 $pelanggan -> alamatPelanggan = $_POST['alamat'];

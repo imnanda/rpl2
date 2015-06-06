@@ -14,4 +14,4 @@ $laundry -> beratCucian = $_POST['berat'];
 $laundry -> idUser = $_POST['id_pelanggan'];
 $laundry -> tambahlaundy();
 //var_dump($laundry);
-header('Location:../index.php');
+header('Location:../pelanggan.php');
