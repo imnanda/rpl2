@@ -70,7 +70,7 @@
             <a href="pelanggan.php"><i class="icon-chevron-right"></i> Data Pelanggan</a>
         </li>
         <li>
-            <a href="buttons.html"><i class="icon-chevron-right"></i> Data laundy</a>
+            <a href="laundry.php"><i class="icon-chevron-right"></i> Data laundy</a>
         </li>
         <li>
             <a href="editors.html"><i class="icon-chevron-right"></i> Pembayaran</a>

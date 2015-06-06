@@ -5,8 +5,8 @@
  * Date: 6/2/2015
  * Time: 7:14 PM
  */
-var_dump($_POST['id_pelanggan']);
-include "../class_user.php";
+//var_dump($_POST['id_pelanggan']);
+include "../data_pelanggan.php";
 $pelanggan = new pelanggan();
 //$pelanggan -> namaPelanggan = $_POST['nama'];
 $pelanggan -> namaPelanggan = $_POST['nama'];
