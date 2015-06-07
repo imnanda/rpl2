@@ -6,7 +6,7 @@
  * Time: 4:21 PM
  */
 include "include/db_connect.php";
-class pelanggan{
+class data_pelanggan{
 
     public  $idPelanggan;
     public  $namaPelanggan;
@@ -36,6 +36,11 @@ class pelanggan{
     function  ambilakhir()
     {
         $sql = "SELECT * FROM t_pelanggan ORDER BY id_pelanggan DESC LIMIT 1";
+        return koneksi::getconn()->query($sql);
+    }
+    function  hapusdata($id_pelanggan)
+    {
+        $sql = "DELET FROM t_pelanggan WHERE id_pelanggan = $id_pelanggan";
         return koneksi::getconn()->query($sql);
     }
 

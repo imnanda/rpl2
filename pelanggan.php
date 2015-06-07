@@ -3,8 +3,8 @@
 <head>
     <?php
     include "include/header.php";
-    include "class_user.php";
-    $datapelanggan = new pelanggan;
+    include "data_pelanggan.php";
+    $datapelanggan = new data_pelanggan;
     $datapelanggan = $datapelanggan->ambildatepelanggan();
     ?>
 </head>
@@ -43,7 +43,7 @@
                         <td><?php echo $pelanggan->nama_pelanggan; ?></td>
                         <td><?php echo $pelanggan->alamat_pelanggan; ?></td>
                         <td><?php echo $pelanggan->telepon; ?></td>
-                        <td><a href="edit_pelanggan.php?id=<?php echo $pelanggan->id_pelanggan; ?>">Edit</a>  /   <a href="hapususer.php?id=<?php echo $pelanggan->id_pelanggan; ?>">Hapus</a> </td>
+                        <td><a href="edit_pelanggan.php?id=<?php echo $pelanggan->id_pelanggan; ?>">Edit</a>  /   <a href="proses/hapuspelanggan.php?id=<?php echo $pelanggan->id_pelanggan; ?>">Hapus</a> </td>
                     </tr>
                     <?php }; ?>
                     </tbody>
@@ -67,24 +67,7 @@
 </div>
 </div>
 <hr>
-<footer>
-    <p>&copy; Vincent Gabriel 2013</p>
-</footer>
-</div>
-<!--/.fluid-container-->
-
-<script src="vendors/jquery-1.9.1.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="vendors/datatables/js/jquery.dataTables.min.js"></script>
-
-
-<script src="assets/scripts.js"></script>
-<script src="assets/DT_bootstrap.js"></script>
-<script>
-    $(function () {
-
-    });
-</script>
+    <?php include("include/footer.php") ?>
 </body>
 
 </html>

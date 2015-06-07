@@ -3,15 +3,11 @@
 <head>
     <?php
     include "include/header.php";
-    include "class_user.php";
-    include "class_laundry.php";
-    $datapelanggan = new pelanggan;
+    include "data_pelanggan.php";
+    include "Data_cucian.php";
+    $datapelanggan = new data_pelanggan;
     $datapelanggan = $datapelanggan->ambilakhir();
     $pelanggan = $datapelanggan->fetch_object();
-
-    $datalaundy = new laundy;
-    $datalaundy = $datalaundy->ambildatalaundy();
-    $laundy = $datalaundy->fetch_object();
     ?>
 </head>
 
@@ -32,15 +28,17 @@
                         <div class="span12">
                             <!-- BEGIN FORM-->
 
-                            <form action="proses/tambahuser.php" class="form-horizontal" method="post">
+                            <form action="proses/tambahlaundy.php" class="form-horizontal" method="post">
                                 <div class="control-group">
-                                    <label class="control-label">Nama User</label>
+                                    <label class="control-label">Nama</label>
 
                                     <div class="controls">
                                         <span
                                             class="input-xlarge uneditable-input"><?php echo $pelanggan->nama_pelanggan; ?></span>
                                     </div>
-                                    <input type="hidden" name="id_laundy" value="<?php echo $laundy->id_cucian; ?>">
+
+                                    <input type="hidden" name="id_pelanggan"
+                                           value="<?php echo $pelanggan->id_pelanggan; ?>">
                                 </div>
                                 <div class="alert alert-error hide">
                                     <button class="close" data-dismiss="alert"></button>
@@ -52,13 +50,14 @@
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label">Jenis<span class="required">*</span></label>
+
                                     <div class="controls">
-                                        <select class="span6 m-wrap" name="category">
+                                        <select class="span6 m-wrap" name="jenis">
                                             <option value="">Pilih...</option>
-                                            <option value="Category 1">Category 1</option>
-                                            <option value="Category 2">Category 2</option>
-                                            <option value="Category 3">Category 5</option>
-                                            <option value="Category 4">Category 4</option>
+                                            <option value="Baju">Baju</option>
+                                            <option value="Celana">Celana</option>
+                                            <option value="Jaket">Jaket</option>
+                                            <option value="jeans">jeans</option>
                                         </select>
                                     </div>
                                 </div>
