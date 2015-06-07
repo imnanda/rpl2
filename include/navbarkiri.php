@@ -63,18 +63,23 @@
 <div class="span3" id="sidebar">
     <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
 
-        <li class="active">
+        <li>
             <a href="index.php"><i class="icon-chevron-right"></i> Dasbord</a>
         </li>
         <li>
             <a href="pelanggan.php"><i class="icon-chevron-right"></i> Data Pelanggan</a>
         </li>
         <li>
-            <a href="buttons.html"><i class="icon-chevron-right"></i> Data laundy</a>
+            <a href="laundry.php"><i class="icon-chevron-right"></i> Data laundy</a>
         </li>
         <li>
-            <a href="editors.html"><i class="icon-chevron-right"></i> Pembayaran</a>
+            <a href="form_pembayaran.php"><i class="icon-chevron-right"></i> Pembayaran</a>
         </li>
-
+        <li>
+            <a href="laporan.php"><i class="icon-chevron-right"></i> Laporan</a>
+        </li>
+        <li>
+            <a href="histori_transaksi.php"><i class="icon-chevron-right"></i> Histori Transaksi</a>
+        </li>
     </ul>
 </div>
