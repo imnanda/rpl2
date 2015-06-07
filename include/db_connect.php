@@ -4,7 +4,7 @@ class Koneksi {
 
     private static $servername = 'localhost';
     private static $username = 'root';
-    private static $password = '';
+    private static $password = 'asdasd150494';
     private static $dbname = 'rpl2';
 
     static private $conn;

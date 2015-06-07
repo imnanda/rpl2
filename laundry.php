@@ -4,8 +4,8 @@
     <?php
     //include "include/db_connect.php";
     include "include/header.php";
-    include "class_laundry.php";
-    $datalaundy = new laundry();
+    include "data_cucian.php";
+    $datalaundy = new data_cucian();
     $datalaundy = $datalaundy->ambildatalaundy();
     ?>
 </head>
@@ -43,7 +43,7 @@
                                         <td><?php echo $laundry->id_cucian; ?></td>
                                         <td><?php echo $laundry->jenis_cucian; ?></td>
                                         <td><?php echo $laundry->berat_cucian; ?> Kg</td>
-                                        <td><a href="edit_laundry.php?id=<?php echo $laundry->id_cucian; ?>">Edit</a>  /   <a href="proses/hapuspelanggan.php?id=<?php echo $laundry->id_cucian; ?>">Hapus</a> </td>
+                                        <td><a href="edit_laundry.php?id=<?php echo $laundry->id_cucian; ?>">Edit</a>  /   <a href="proses/hapuslaundy.php?id=<?php echo $laundry->id_cucian; ?>">Hapus</a> </td>
                                     </tr>
                                 <?php }; ?>
                                 </tbody>

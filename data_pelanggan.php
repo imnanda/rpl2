@@ -6,7 +6,7 @@
  * Time: 4:21 PM
  */
 include "include/db_connect.php";
-class pelanggan{
+class data_pelanggan{
 
     public  $idPelanggan;
     public  $namaPelanggan;
@@ -40,7 +40,7 @@ class pelanggan{
     }
     function  hapusdata($id_pelanggan)
     {
-        $sql = "DELET FROM t_pelanggan WHERE id_pelanggan = $id_pelanggan";
+        $sql = "DELETE FROM t_pelanggan WHERE id_pelanggan = '$id_pelanggan'";
         return koneksi::getconn()->query($sql);
     }
 

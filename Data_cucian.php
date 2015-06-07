@@ -6,7 +6,7 @@
  * Time: 4:21 PM
  */
 
-class laundry{
+class Data_cucian{
 
     public  $idCucian;
     public  $jenisCucian;
